@@ -1,0 +1,42 @@
+
+       /* Comentario CSS*/
+      /* Seletores de CSS*/
+
+      /*seletor universal
+  *{
+    color:brown
+  }
+
+  */
+
+/* ========= seletor tag HTML======*/
+h1{
+    color: lightblue;
+}
+
+body{
+    background: linear-gradient(to top, white);
+}
+
+  p{
+    color:rgb(10, 240, 100
+    );
+  }
+
+
+/*======Seletor Class=======*/
+ .parágrafo-bolha{
+    color:white;
+ }
+
+/*=======Seletor ID======== */
+
+#parágrafo-henry{
+        color:red;
+    }
+     
+    table { color:rgb(214, 60, 86) 
+    }
+    div {color: rgb(rgb(212, 224, 0), rgb(0, rgb(8, 8, 137)0), blue)}
+
+ 

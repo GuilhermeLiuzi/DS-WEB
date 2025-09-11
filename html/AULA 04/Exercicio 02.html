@@ -1,0 +1,69 @@
+<!--Guilherme Liuzi n°9-->
+<!--exercicio 2-->
+<!DOCTYPE html>
+<html>
+    <!--Formulário de Pesquisa de Preferências de coisas -->
+<head>
+  <title>Formulário de Pesquisa de Preferências</title>
+</head>
+<br>
+<hr>
+<br>
+<body>
+  <center>
+    <div>
+      <h1>Pesquisa de Preferências</h1>
+      <form method="post">
+        <div>
+          <!-- campo genero usando radio obrigatorios -->
+          <label>Gênero</label>
+          <br>
+          <input type="radio" id="masculino" name="genero" value="Masculino" required>
+          <label for="masculino">Masculino</label>
+          <br>
+          <input type="radio" id="feminino" name="genero" value="Feminino">
+          <label for="feminino">Feminino</label>
+          <br>
+          <input type="radio" id="outro" name="genero" value="Outro">
+          <label for="outro">Outro</label>
+        </div>
+
+        <div>
+          <!-- campo interesses usando checkbox (pelo menos uma marcada por padrao) -->
+          <label>Interesses</label><br>
+          <input type="checkbox" id="tecnologia" name="interesses" value="Tecnologia" checked>
+          <label for="tecnologia">Tecnologia</label>
+          <br>
+          <input type="checkbox" id="esportes" name="interesses" value="Esportes">
+          <label for="esportes">Esportes</label>
+          <br>
+          <input type="checkbox" id="arte" name="interesses" value="Arte">
+          <label for="arte">Arte</label>
+          <br>
+          <input type="checkbox" id="musica" name="interesses" value="Música">
+          <label for="musica">Música</label>
+        </div>
+
+        <div>
+          <!-- campo (select)  para carros favoritos do usuario-->
+          <label for="carro">Escolha seu carro favorito</label>
+          <br>
+          <select id="carro" name="carro">
+            <optgroup label="Sedans">
+              <option value="Toyota Corolla">Toyota Corolla</option>
+              <option value="Honda Civic">Honda Civic</option>
+            </optgroup>
+            <optgroup label="SUVs">
+              <option value="Honda CR-V">Honda CR-V</option>
+              <option value="Toyota RAV4">Toyota RAV4</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- botao de envio -->
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </center>
+</body>
+</html>

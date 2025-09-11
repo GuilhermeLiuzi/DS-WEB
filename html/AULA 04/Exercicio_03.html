@@ -1,0 +1,44 @@
+<!--Guilherme Liuzi n°9-->
+<!--exercicio 3-->
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulário de Feedback</title>
+</head>
+<body>
+  <center>
+    <div>
+      <h1>Formulário de Feedback</h1>
+      <!-- Formulário de Feedback -->
+       <method="post">
+        <div>
+          <!-- Campo de nome (esta parte é opcional para o usuario ) -->
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome aqui">
+        </div>
+         <br>
+        <div>
+          <!-- Campo de e-mail (esta parte é obrigatório para o usuario ) -->
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="aquiseuemail@exemplo.com.br" required>
+        </div>
+        <br>
+        <div>
+          <!-- Campo de textarea para o usuario deixar sua  opiniao -->
+          <label for="opiniao"><b>Sua opinião:</b></label>
+          <br>
+          <textarea id="opiniao" name="opiniao" rows="6" cols="50" maxlength="300" placeholder="Digite aqui sua opinião aqui..." required></textarea>
+        </div>
+        <br>
+        <!-- Botao de enviar  -->
+        <button type="submit"><b>Enviar</b></button>
+      </form>
+    </div>
+  </center>
+</body>
+</html>
+<!--pesquisa sobre (required ) 
+O atributo "required" em HTML5 é um atributo booleano usado em elementos de formulário para indicar que um campo de entrada específico deve ser preenchido antes que o formulário possa ser enviado.-->
+<!--Quando esse atributo está presente em um elemento input, select ou textarea, o navegador impede o envio e, frequentemente, exibe uma mensagem de erro se o campo estiver vazio-->

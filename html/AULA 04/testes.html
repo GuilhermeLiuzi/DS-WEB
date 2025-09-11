@@ -1,0 +1,155 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro Simples</title>
+</head>
+<body>
+
+  <div>
+    <h1>Exercício 1 - Formulário de Cadastro Simples</h1>
+    <form method="post">
+      <div>
+        <!--nome completo do usuario, é obrigatorio o usuario colocar seu nome completo neste campo  -->
+        <label for="nome"><b>Nome completo</b></label>
+        <input type="text" id="nome" name="nome" maxlength="50" placeholder="Digite seu nome completo, este campo é obrigatorio" required>
+      </div>
+
+      <div>
+        <!--email do usuario -->
+        <label for="email"><b>E-mail</b></label>
+        <input type="email" id="email" name="email" placeholder="email@exemplo.com.br" required>
+      </div>
+
+      <div>
+        <!--senha do usuario, é obrigatorio o usuario digitar uma senha -->
+        <label for="senha"><b>Senha</b></label>
+        <input type="password" id="senha" name="senha" placeholder=" Digite a sua senha, este campo é obrigatorio" required>
+      </div>
+
+      <div>
+        <!--idade do usuario, idade minima de 1 e maxima de 120 -->
+        <label for="idade"><b>Idade</b></label>
+        <input type="number" id="idade" name="idade" min="1" max="120" placeholder="Sua idade" required>
+      </div>
+      <input type="radio" id="opcao1" name="escolha" value="1">
+<label for="opcao1">Primeira opção</label>
+<input type="radio" id="opcao2" name="escolha" value="2" checked>
+<label for="opcao2">Segunda Opção</label>
+<br>
+<br>
+<input type="checkbox" id="noticias" name="interesses" value="noticia
+s">
+<label for="noticias">Receber notícias</label>
+<input type="checkbox" id="promocoes" name="interesses" value="prom
+ocoes" checked>
+<label for="promocoes">Receber promoções</label>
+<br>
+<!--menu suspenso-->
+<label for="cores">Escolha sua cor favorita:</label>
+<select id="cores" name="cores" size="3">
+<option value="vermelho">Vermelho</option>
+<option value="azul">Azul</option>
+<option value="verde">Verde</option>
+</select>
+<br>
+<br>
+<br>
+<!--carro teste-->
+<label for="carros">Escolha um carro:</label>
+<select id="carros" name="carros">
+<optgroup label="Sedans">
+<option value="corolla">Toyota Corolla</option>
+<option value="civic">Honda Civic</option>
+</optgroup>
+<optgroup label="SUVs">
+<option value="crv">Honda CR-V</option>
+<option value="rav4"Toyota RAV4 </option>
+</optgroup>
+</select>
+<br>
+<br>
+<br>
+<!--seleçao de hobbies-->
+<label for="hobbies">Selecione seus hobbies:</label>
+<select id="hobbies" name="hobbies" multiple size="4">
+<option value="leitura">Leitura</option>
+<option value="musica">Música</option>
+<option value="esportes">Esportes</option>
+<option value="viagem">Viagem</option>
+</select>
+<br>
+<br>
+<label for="resumo">Resumo:</label><br>
+<textarea id="resumo" name="resumo" rows="6" cols="60" max-leng
+th="300" required>
+Sou apaixonado por tecnologia e adoro explorar novas linguagens de
+programação.
+</textarea>
+<br><br>
+<button type="submit">Enviar</button>
+</form>
+<br>
+<br>
+      <button type="submit"><b>Enviar</b></button>
+    </form>
+  </div>
+</body>
+<!--aqui começa outro formulario-->
+<br>
+<hr>
+<br>
+<title> SEGUNDO FORMULARIO DE CADASTRO</title>
+<form action="/submit" method="post">
+  <br>
+  <!-- Campo de texto -->
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+  <br>
+  <!-- Campo de e-mail -->
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" placeholder="email@exe
+  mplo.com" required>
+  <br>
+  <!-- Campo de senha -->
+  <label for="senha">Senha:</label>
+  <input type="password" id="senha" name="senha" placeholder="Digite
+  sua senha" required>
+  <br>
+  <!-- Campo numérico -->
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" name="idade" min="1" max="120" req
+  uired>
+
+  </br><br><!-- Utilizado para pular linha para melhorar a visibilidade do e
+  xemplo -->
+  <!-- Botões de rádio -->
+  <label>Gênero:</label>
+  <br>
+  <input type="radio" id="masculino" name="genero" value= "masculino"
+required>
+<label for="masculino">Masculino</label>
+<input type="radio" id="feminino" name="genero" value="feminino">
+<label for="feminino">Feminino</label>
+</br><br><!-- Utilizado para pular linha para melhorar a visibilidade do e
+xemplo -->
+<!-- Caixas de seleção -->
+<br>
+<label>Interesses:</label>
+<input type="checkbox" id="tecnologia" name="interesses" value="tec
+nologia">
+<br>
+<label for="tecnologia">Tecnologia</label>
+<input type="checkbox" id="esportes" name="interesses" value="espor
+tes">
+<br>
+<label for="esportes">Esportes</label>
+<input type="checkbox" id="arte" name="interesses" value="arte">
+<label for="arte">Arte</label>
+</br><br><!-- Utilizado para pular linha para melhorar a visibilidade do e
+xemplo -->
+<!-- Botão de envio - submit -->
+<button type="submit">Enviar</button>
+</form>

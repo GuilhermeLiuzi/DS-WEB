@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffefef;
+    color: #000;
+    padding: 20px;
+    line-height: 1.5;
+  }
+  
+  /* CABEÇALHO */
+  header {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* BLOCOS DE NOTÍCIA */
+  .noticia-resumo,
+  .noticia-lula,
+  .noticia-01,
+  .noticia-02 {
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .noticia-resumo h3,
+  .noticia-lula h2,
+  .noticia-01 h2,
+  .noticia-02 h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .noticia-01 h2,
+  .noticia-02 h2 {
+    font-size: 22px;
+  }
+  
+  .noticia-resumo img,
+  .noticia-lula img,
+  .noticia-01 img,
+  .noticia-02 img {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .noticia-resumo p,
+  .noticia-lula p {
+    margin-bottom: 10px;
+  }
+  
+  /* LINKS */
+  .leia-mais-aqui,
+  .voltar-ao-inicio {
+    display: inline-block;
+    padding: 8px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .leia-mais-aqui {
+    background: #3498db;
+  }
+  .leia-mais-aqui:hover {
+    background: #2980b9;
+  }
+  
+  .voltar-ao-inicio {
+    background: #2c3e50;
+    margin: 15px 0;
+  }
+  .voltar-ao-inicio:hover {
+    background: #1a2530;
+  }
+  
+  /* TABELA */
+  .noticias-relacionadas h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 20px 0 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  table a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  table a:hover {
+    text-decoration: underline;
+  }
+  
+  /* LINHA */
+  hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+  }
+  
