@@ -1,0 +1,22 @@
+.box{
+    margin:10px;
+    background-color: aquamarine;
+    height: 150px;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    align-content: center;
+    display: inline-block
+}
+
+.box2{
+    margin:10px;
+    background-color: rgb(131, 213, 49);
+    height: 150px;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    align-content: center;
+    display: inline-block
+}
+

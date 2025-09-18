@@ -1,0 +1,28 @@
+.box{
+    background-color: rgb(156, 219, 54);
+    width: 200px;
+    height: 250px ;
+    padding: 15px; 
+    margin: 20px ;
+    display: inline-block
+        
+}
+
+.box2{
+    background-color: rgb(91, 206, 46);
+    width: 200px;
+    height: 250px ;
+    padding: 25px; 
+    margin: 30px ;
+    display: inline-block
+}
+
+.box3{
+    background-color: rgb(178, 47, 201);
+    width: 200px;
+    height: 250px ;
+    padding: 35px; 
+    margin: 40px ;
+    display: inline-block
+}
+

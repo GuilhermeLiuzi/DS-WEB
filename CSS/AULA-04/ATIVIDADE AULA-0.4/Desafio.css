@@ -1,0 +1,161 @@
+.div1{
+    margin-left: 470px;
+}
+.div2{
+    margin-left: 470px;
+}
+.div3{
+    margin-left: 470px;
+}
+.box{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(158, 200, 31);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+   
+}
+
+.box:hover{
+    color: white;
+}
+
+.box2{
+    display: inline-block;
+    align-content: center;
+    background-color:rgb(255, 217, 0);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border-style: dashed;
+}
+
+.box2:hover{
+    color: white;
+}
+.box3{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(61, 158, 197);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+}
+
+.box3:hover{
+    color: white;
+}
+
+.box4{
+    display: inline-block;
+    align-content: center;
+    background-color:rgb(108, 30, 181);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border-style: dashed;
+}
+
+.box4:hover{
+    color: white;
+}
+
+.box5{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(212, 60, 220);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+}
+
+.box5:hover{
+    color: white;
+}
+
+.box6{
+    display: inline-block;
+    align-content: center;
+    background-color:rgb(42, 191, 99);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border-style: dashed;
+}
+
+.box6:hover{
+    color: white;
+}
+
+.box7{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(27, 100, 196);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+}
+
+.box7:hover{
+    color: white;
+}
+
+.box8{
+    display: inline-block;
+    align-content: center;
+    background-color:rgb(190, 24, 24);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border-style: dashed;
+}
+
+.box8:hover{
+    color: white;
+}
+
+.box9{
+    display: inline-block;
+    align-content: center;
+    background-color:rgb(57, 0, 200);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+}
+
+.box9:hover{
+    color: white;
+}

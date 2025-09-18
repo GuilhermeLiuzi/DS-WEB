@@ -1,0 +1,23 @@
+.div-centralizada{
+    height: 300px;
+    width: 400px;
+    display: inline-block;
+    background-color: bisque;
+}
+
+
+
+
+
+
+.box{
+    margin:100px 80px;
+    background-color: aquamarine;
+    height: 100px;
+    width: 200px;
+
+    text-align: center;
+    align-content: center;
+    
+}
+
