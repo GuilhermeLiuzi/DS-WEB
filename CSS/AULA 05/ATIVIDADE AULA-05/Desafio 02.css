@@ -1,0 +1,109 @@
+    .nomeG{
+margin-top: 10px;
+position:sticky;
+height: 50px;
+width: 50px;
+background-color: blue;
+color: white;
+top: 0px;
+left: 0px;
+text-align: center;
+align-content: center;
+    }
+
+    .nomeU{
+        margin-top: 10px;
+        position:sticky;
+        height: 50px;
+        width: 50px;
+        background-color: rgb(26, 235, 26);
+        color: white;
+        top: 0px;
+        left: 50px;
+        text-align: center;
+        align-content: center;
+            }
+            .nomeI{
+                margin-top: 10px;
+                position:sticky;
+                height: 50px;
+                width: 50px;
+                background-color: rgb(238, 255, 0);
+                color: white;
+                top: 0px;
+                left: 100px;
+                text-align: center;
+                align-content: center;
+                    }
+                    .nomeL{
+                        margin-top: 10px;
+                        position:sticky;
+                        height: 50px;
+                        width: 50px;
+                        background-color: rgb(183, 123, 12);
+                        color: white;
+                        top: 0px;
+                        left: 150px;
+                        text-align: center;
+                        align-content: center;
+                            }
+                            .nomeH{
+                                margin-top: 10px;
+                                position:sticky;
+                                height: 50px;
+                                width: 50px;
+                                background-color: rgb(20, 201, 186);
+                                color: white;
+                                top: 0px;
+                                left: 200px;
+                                text-align: center;
+                                align-content: center;
+                                    }
+                                    .nomeE{
+                                        margin-top: 10px;
+                                        position:sticky;
+                                        height: 50px;
+                                        width: 50px;
+                                        background-color: rgb(55, 25, 174);
+                                        color: white;
+                                        top: 0px;
+                                        left: 250px;
+                                        text-align: center;
+                                        align-content: center;
+                                            }
+                                            .nomeR{
+                                                margin-top: 10px;
+                                                position:sticky;
+                                                height: 50px;
+                                                width: 50px;
+                                                background-color: rgb(221, 18, 62);
+                                                color: white;
+                                                top: 0px;
+                                                left: 300px;
+                                                text-align: center;
+                                                align-content: center;
+                                                    }
+                                                    .nomeM{
+                                                        margin-top: 10px;
+                                                        position:sticky;
+                                                        height: 50px;
+                                                        width: 50px;
+                                                        background-color: rgb(6, 184, 187);
+                                                        color: white;
+                                                        top: 0px;
+                                                        left: 350px;
+                                                        text-align: center;
+                                                        align-content: center;
+                                                            }
+                                                            .nomeE2{
+                                                                margin-top: 10px;
+                                                                position:sticky;
+                                                                height: 50px;
+                                                                width: 50px;
+                                                                background-color: rgb(3, 177, 44);
+                                                                color: white;
+                                                                top: 0px;
+                                                                left: 400px;
+                                                                text-align: center;
+                                                                align-content: center;
+                                                                    }

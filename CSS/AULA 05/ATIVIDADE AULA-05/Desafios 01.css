@@ -1,0 +1,30 @@
+.menu{
+    
+    height: 60px;
+    background-color: blue;
+    color: white;
+    line-height: 60px;
+    position: sticky;
+    text-align: center;
+    top: 0; 
+}
+
+.menu-lateral{
+    position: fixed;
+    top: 60px;      
+    height: 100%;    
+    width: 200px;
+    background-color: rgb(203, 237, 233);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.txt{
+    background-color: aliceblue;
+    padding: 20px;
+    flex: 1;
+    line-height: 1.6;
+    margin-left: 200px;
+}
