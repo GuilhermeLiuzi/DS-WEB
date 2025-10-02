@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    background-color: beige;
+}
+.titulo1
+{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(252, 236, 213);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid black;
+   
+   
+   
+}
+
+.titulo {
+    height: 60px;
+    background-color: rgb(242, 218, 163);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 60px;
+    position: sticky;
+    top: 0; 
+}
+
+.titulo{
+    height: 60px;
+    background-color: rgb(201, 242, 163);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 60px;
+    position: sticky;
+    top: 0; 
+}
+.promo{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(252, 236, 213);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid black;
+   
+}
+.reserv{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(253, 237, 213);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid black;
+       
+}
+.historia{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(253, 237, 213);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid black;
+       
+}
+.inicio{
+    display: inline-block;
+    align-content: center;
+    background-color: rgb(252, 236, 213);
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid black;
+   
+}
