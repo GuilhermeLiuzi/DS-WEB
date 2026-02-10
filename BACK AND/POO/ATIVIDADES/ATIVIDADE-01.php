@@ -1,4 +1,9 @@
 <?php
+
+echo "<h1>  Introdução a Orientação a Objetos </h1>";
+
+//CLASSE AVIAO
+
 class Aviao {
     public $cor;
     public $potencia;
@@ -16,6 +21,27 @@ class Aviao {
         return "O avião ataca com armas: " . $this->motor;
     }
 }
+
+$aviaoVoar = new Aviao();
+$aviaoVoar->potencia = "2500cv";
+echo "<br>";
+echo $aviaoVoar->voar();
+
+$aviaoPlanar = new Aviao();
+$aviaoPlanar->autonomia = "1000km";
+echo "<br>";
+echo $aviaoPlanar->planar();
+
+
+$avaiaAtaca = new Aviao();
+$avaiaAtaca->motor = "Máquina de guerra";
+echo "<br>";
+echo $avaiaAtaca->ataca();
+
+
+echo "<br>";
+
+//CLASSE TANQUE
 
 class Tanque  {
     public $blindagem;
@@ -35,6 +61,26 @@ class Tanque  {
     }
 }
 
+$TanqueAndar = new Tanque();
+$TanqueAndar->potencia = "2500cv";
+echo "<br>";
+echo $TanqueAndar->andar();
+
+$TanqueCamuflar = new Tanque();
+$TanqueCamuflar->camuflagem = "Verde";
+echo "<br>";
+echo $TanqueCamuflar->camuflar();
+
+$TanqueAtacar = new Tanque();
+$TanqueAtacar->calibre = "Máquina de guerra";
+echo "<br>";
+echo $TanqueAtacar->atacar();
+
+
+echo "<br>";
+
+//CLASSE NAVIO
+
 class Navio  {
     public $classe;
     public $Função;
@@ -52,6 +98,27 @@ class Navio  {
         return "O navio é da nacionalidade: " . $this->nacionalidade;
     }
 }
+
+$navioClasse = new Navio();
+$navioClasse->classe = "Navio de passageiros";
+echo "<br>";
+echo $navioClasse->classe();
+
+$navioTamanho = new Navio();
+$navioTamanho->tamanho = "30 metros";
+echo "<br>";
+echo $navioTamanho->tamanho();
+
+$navioNacionalidade = new Navio();
+$navioNacionalidade->nacionalidade = "Brasileira";
+echo "<br>";
+echo $navioNacionalidade->nacionalidade();
+
+
+echo "<br>";
+
+
+//CLASSE MOTO
 
 class Moto  {
     public $modelo;
@@ -71,9 +138,24 @@ class Moto  {
     }
 }
 
+$motoPotencia = new Moto();
+$motoPotencia->potencia = "250cv";
+echo "<br>";
+echo $motoPotencia->andar();
 
+$motoTamanho = new Moto();
+$motoTamanho->tamanho = "150cm";
+echo "<br>";
+echo $motoTamanho->tamanho();
 
+$motoValor = new Moto();
+$motoValor->valor = "R$ 25.000,00";
+echo "<br>";
+echo $motoValor->valor();
 
+echo "<br>";
+
+//CLASSE COMPUTADOR
 
 class Computador {
     public $modelo ;
