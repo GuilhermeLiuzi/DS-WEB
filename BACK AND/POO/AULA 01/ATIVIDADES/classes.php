@@ -71,6 +71,21 @@ class Moto  {
     }
 }
 
+$moto = new Computador();
+$computadorBom->modelo = "Acer Nitro 5";
+echo "<br>";
+echo $computadorBom->modelo();
+
+$computadortamanho = new Computador();
+$computadortamanho->tamanho = "15 polegadas";
+echo "<br>";
+echo $computadortamanho->tamanho();
+
+$computadorFunção = new Computador();
+$computadorFunção->função = "jogar e trabalhar";   
+echo "<br>";
+echo $computadorFunção->função();
+
 
 
 
