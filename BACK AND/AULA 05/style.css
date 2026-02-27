@@ -1,0 +1,31 @@
+style.css
+body {
+text-align: center;
+background: #fafafa;
+}
+.area{
+margin: 0 auto;
+width: 200px;
+height: 100px;
+border: 1px solid black;
+margin: 20px auto;
+padding: 10px;
+}
+body {
+    background: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h4{
+margin: 0;
+}
+.mensagem, .posicao {
+font-weight: bold;
+}
+.espacamento{
+height: 500px;
+}
