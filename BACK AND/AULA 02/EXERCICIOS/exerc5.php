@@ -51,7 +51,7 @@ class CPF extends Documento {
 
 
 $cpf = new CPF();
-$cpf->setNumero("518.277.247-25"); 
+$cpf->setNumero("366.086.320-37"); 
 
 if ($cpf->validar()) {
     echo "CPF válido!";
@@ -60,3 +60,4 @@ if ($cpf->validar()) {
 }
 
 ?>
+
