@@ -1,10 +1,10 @@
-
-
 document.getElementById("formulario").addEventListener("submit", function(e){
 e.preventDefault();
 
 let resultado = document.getElementById("resultado");
 resultado.innerHTML = "";
+
+
 
 /* CAPTURAR */
 
@@ -20,6 +20,8 @@ let valor = document.getElementById("valor").value;
 let url = document.getElementById("url").value;
 let cartao = document.getElementById("cartao").value;
 
+
+
 /* LIMPAR ERROS */
 
 document.getElementById("erro-nome").textContent="";
@@ -33,6 +35,9 @@ document.getElementById("erro-valor").textContent="";
 document.getElementById("erro-url").textContent="";
 document.getElementById("erro-cartao").textContent="";
 
+
+
+
 /* VALIDAR NOME */
 
 let nomeRegex = /^[A-Za-zÀ-ú\s]{3,50}$/;
@@ -45,6 +50,9 @@ document.getElementById("erro-nome").textContent="Nome inválido.";
 resultado.innerHTML += "Nome válido: "+nome+"<br>";
 }
 
+
+
+
 /* EMAIL */
 
 let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -56,6 +64,9 @@ document.getElementById("erro-email").textContent="Email inválido.";
     /* Se estiver certo*/
 resultado.innerHTML += "Email válido: "+email+"<br>";
 }
+
+
+
 
 /* SENHA */
 
@@ -74,6 +85,9 @@ else{
 resultado.innerHTML += "Senha válida<br>";
 }
 
+
+
+
 /* CPF (apenas formato) */
 
 let cpfRegex = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
@@ -85,6 +99,9 @@ document.getElementById("erro-cpf").textContent="CPF inválido.";
 /* Se estiver certo*/
 resultado.innerHTML += "CPF válido<br>";
 }
+
+
+
 
 /* TELEFONE */
 
@@ -98,6 +115,10 @@ document.getElementById("erro-telefone").textContent="Telefone inválido.";
 resultado.innerHTML += "Telefone válido<br>";
 }
 
+
+
+
+
 /* CEP */
 
 let cepRegex = /^\d{5}\-\d{3}$/;
@@ -109,6 +130,10 @@ document.getElementById("erro-cep").textContent="CEP inválido.";
 /* Se estiver certo*/
 resultado.innerHTML += "CEP válido<br>";
 }
+
+
+
+
 
 /* DATA */
 
@@ -122,6 +147,9 @@ document.getElementById("erro-data-nascimento").textContent="Data inválida.";
 resultado.innerHTML += "Data válida<br>";
 }
 
+
+
+
 /* VALOR */
 
 let valorRegex = /^\d{1,3}(\.\d{3})*,\d{2}$/;
@@ -134,6 +162,9 @@ document.getElementById("erro-valor").textContent="Valor inválido.";
 resultado.innerHTML += "Valor válido<br>";
 }
 
+
+
+
 /* URL */
 
 let urlRegex = /^(http:\/\/|https:\/\/)/;
@@ -145,6 +176,10 @@ document.getElementById("erro-url").textContent="URL inválida.";
 /* Se estiver certo*/
 resultado.innerHTML += "URL válida<br>";
 }
+
+
+
+
 
 /* CARTÃO */
 
