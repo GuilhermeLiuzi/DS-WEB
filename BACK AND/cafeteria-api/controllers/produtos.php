@@ -1,102 +1,66 @@
-
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header('Content-Type: application/json'); // Informa que o retorno é JSON
 
-require_once 'database.php';
+// Caminho corrigido para subir um nível e achar o database.php
+require_once __DIR__ . '/../database.php'; 
+
 $database = new Database();
+$method = $_SERVER['REQUEST_METHOD'];
 
-$method   = $_SERVER['REQUEST_METHOD'];
-$path     = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$path     = trim($path, '/');
-$segments = explode('/', $path);
+switch($method){
+    case 'GET':
+        try {
+            $resultado = $database->executeQuery('SELECT * FROM produtos');
+            $produtos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-$id = $segments[2] ?? null;
-
-switch ($method) {
-   case 'GET':
-    if ($id) {
-        $resultado = $database->executeQuery("SELECT * FROM produtos WHERE id = :id", [':id' => $id]);
-        $dados = $resultado->fetch();
-
-        if (!$dados) {
-            http_response_code(404);
-            echo json_encode(['status' => 'error', 'message' => 'Produto não encontrado.']);
-            break;
+            echo json_encode([
+                'status' => 'success',
+                'data'   => $produtos
+            ]);
+        } catch (Exception $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
         }
-    } else {
-        $resultado = $database->executeQuery("SELECT * FROM produtos");
-        $dados = $resultado->fetchAll();
-    }
-
-    echo json_encode(['status' => 'success', 'data' => $dados]);
-    break;
+        break;
 
     case 'POST':
         $body = json_decode(file_get_contents('php://input'), true);
         $nome = trim($body['nome'] ?? '');
+        $preco = trim($body['preco'] ?? '');
+        $categoria_id = trim($body['categoria_id'] ?? '');
+        $disponivel = 1;
 
-        if (!$nome) {
-            http_response_code(400);
-            echo json_encode([
-                'status' => 'error',
-                'message' => 'Campo nome não informado'
-            ]);
+        if(!$nome || !$preco || !$categoria_id){
+            echo json_encode(['status' => 'error', 'message' => 'Campos obrigatórios faltando']);
             break;
         }
+
         $database->executeQuery(
-            "INSERT INTO produtos (nome) VALUES (:nome)",
-            [':nome' => $nome]
+            "INSERT INTO produtos (nome, preco, categoria_id, disponivel) VALUES (:nome, :preco, :categoria_id, :disponivel)",
+            [ ':nome' => $nome, ':preco' => $preco, ':categoria_id' => $categoria_id, ':disponivel' => $disponivel ]
         );
 
         http_response_code(201);
         echo json_encode([
             'status' => 'success',
-            'message' => 'Produto cadastrado com sucesso',
             'idProduto' => $database->lastInsertId()
         ]);
-
-        break;
-
-    case 'PUT':
-        // Lógica para atualizar um produto existente
         break;
 
     case 'DELETE':
-        if (!$id) {
-            http_response_code(400);
-            echo json_encode([
-                'status' => 'error',
-                'message' => 'ID do produto não informado'
-            ]);
-            break;
-        }
-        $produto = $database->executeQuery(
-            "DELETE FROM produtos WHERE id = :id",
-            [':id' => $id]
-        );
-        
-        if ($produto->rowCount() === 0) {
-            http_response_code(404);
-            echo json_encode([
-                'status' => 'error',
-                'message' => 'Produto não encontrado'
-            ]);
+        $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $segments = explode('/', trim($path, '/'));
+        $id = end($segments);
+
+        if (!is_numeric($id)) {
+            echo json_encode(['status' => 'error', 'message' => 'ID inválido']);
             break;
         }
 
-        echo json_encode([
-            'status' => 'success',
-            'message' => 'Produto deletado com sucesso'
-        ]);
-
-    default:
-        http_response_code(405);
-        echo json_encode([
-            'status'  => 'error',
-            'message' => 'Método não permitido.'
-        ]);
+        $database->executeQuery('DELETE FROM produtos WHERE id = :id', [':id' => $id]);
+        echo json_encode(['status' => 'success', 'message' => 'Removido']);
+        break;
 }
-
-
-
-
-
