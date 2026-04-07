@@ -8,12 +8,6 @@ document.getElementById('botaoEnviar').addEventListener('click', postCategoria)
 
 async function getCategorias() {
     var requisicao = await fetch("http://localhost/cafeteria-api/categorias")
-    if (!requisicao.ok) {
-        var erroTexto = await requisicao.text()
-        console.error('Erro ao obter categorias:', requisicao.status, erroTexto)
-        return
-    }
-
     var resposta = await requisicao.json()
 
     console.log(resposta)
@@ -47,22 +41,18 @@ async function getCategorias() {
     `;
 }
 
+
+
 async function postCategoria() {
     var requisicao = await fetch("http://localhost/cafeteria-api/categorias", {
         method:  "POST",
-        headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ nome: inputNome.value })
     })
-
-    if (!requisicao.ok) {
-        var erroTexto = await requisicao.text()
-        console.error('Erro ao cadastrar categoria:', requisicao.status, erroTexto)
-        return
-    }
 
     var resposta = await requisicao.json()
     console.log(resposta)
     
+    //Limpa o campo
     inputNome.value = ""
 
     getCategorias()
@@ -73,12 +63,6 @@ async function deleteCategoria(id) {
     var requisicao = await fetch("http://localhost/cafeteria-api/categorias/" + id, {
         method: "DELETE"
     })
- 
-    if (!requisicao.ok) {
-        var erroTexto = await requisicao.text()
-        console.error('Erro ao deletar categoria:', requisicao.status, erroTexto)
-        return
-    }
  
     var resposta = await requisicao.json()
     console.log(resposta)

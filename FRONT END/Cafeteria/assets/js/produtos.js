@@ -1,46 +1,45 @@
-
 var divResposta = document.getElementById("resposta")
-var inputNome = document.getElementById("nome")
-// os inputs var inputNome   = document.getElementById("nome")
 
-document.addEventListener('DOMContentLoaded', getProdutos)
+var inputNome = document.getElementById("nome")
+var inputPreco = document.getElementById("preco")
+var inputCategoria = document.getElementById("categoria_id")
+
+document.addEventListener('DOMContentLoaded', () => {
+    getProdutos()
+    getCategorias()
+})
+
 document.getElementById('botaoEnviar').addEventListener('click', postProduto)
 
 async function getProdutos() {
     var requisicao = await fetch("http://localhost/cafeteria-api/produtos")
-    if (!requisicao.ok) {
-        var erroTexto = await requisicao.text()
-        console.error('Erro ao obter produtos:', requisicao.status, erroTexto)
-        divResposta.innerHTML = `<p class="erro">Erro ${requisicao.status}: ${erroTexto}</p>`
-        return
-    }
-
     var resposta = await requisicao.json()
-    console.log('Resposta getProdutos', resposta)
 
-    const dados = Array.isArray(resposta.data) ? resposta.data : Array.isArray(resposta) ? resposta : []
-    if (!dados.length) {
-        divResposta.innerHTML = '<p>Nenhum produto encontrado.</p>'
-        return
-    }
+    console.log(resposta)
 
-const linhas = dados.map(item => `
-    <tr>
-        <td>${item.id}</td>
-        <td>${item.nome}</td>
-        <td><button onclick="deleteProduto(${item.id})">Deletar</button></td>
-    </tr>
-`).join("");
-
+    const linhas = resposta.data.map(item => `
+        <tr>
+            <td>${item.id}</td>
+            <td>${item.nome}</td>
+            <td>${item.preco}</td>
+            <td>${item.categoria_id}</td>
+            <td>${item.disponivel}</td>
+            <td><button onclick="deleteProduto(${item.id})">Deletar</button></td>
+        </tr>
+    `).join("")
+    
     divResposta.innerHTML = `
         <table class="sua-classe">
             <thead>
                 <tr>
-                    <th colspan="3" ><center>Produtos Cadastrados</center></th>
+                    <th colspan="6"><center>Produtos Cadastrados</center></th>
                 </tr>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Categorias</th>
+                    <th>Disponível</th>
                     <th>Opções</th>
                 </tr>
             </thead>
@@ -49,44 +48,53 @@ const linhas = dados.map(item => `
             </tbody>
         </table>
     `
+}
 
+async function getCategorias() {
+    var requisicao = await fetch("http://localhost/cafeteria-api/categorias")
+    var resposta = await requisicao.json()
+
+    console.log(resposta)
+
+    const select = document.getElementById("categoria_id")
+
+    select.innerHTML = `
+        <option value="">Selecione uma categoria</option>
+    ` + resposta.data.map(cat => `
+        <option value="${cat.id}">${cat.nome}</option>
+    `).join("")
 }
 
 async function postProduto() {
     var requisicao = await fetch("http://localhost/cafeteria-api/produtos", {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify({ nome: inputNome.value })
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            nome: inputNome.value,
+            preco: inputPreco.value,
+            categoria_id: inputCategoria.value
+        })
     })
-
-    if (!requisicao.ok) {
-        var erroTexto = await requisicao.text()
-        console.error('Erro ao cadastrar produto:', requisicao.status, erroTexto)
-        alert('Erro ao cadastrar produto: ' + requisicao.status + '\n' + erroTexto)
-        return
-    }
 
     var resposta = await requisicao.json()
     console.log(resposta)
 
     inputNome.value = ""
+    inputPreco.value = ""
+    inputCategoria.value = ""
+
     getProdutos()
 }
 
-
 async function deleteProduto(id) {
-    var requisicao = await fetch(`http://localhost/cafeteria-api/produtos/${id}`, {
+    var requisicao = await fetch("http://localhost/cafeteria-api/produtos/" + id, {
         method: "DELETE"
     })
 
-    if (!requisicao.ok) {
-        var erroTexto = await requisicao.text()
-        console.error('Erro ao deletar produto:', requisicao.status, erroTexto)
-        alert('Erro ao deletar produto: ' + requisicao.status + '\n' + erroTexto)
-        return
-    }
-
     var resposta = await requisicao.json()
     console.log(resposta)
+
     getProdutos()
 }
